@@ -4,7 +4,7 @@ export const projects = [
         title: "ResourceDeck",
         category: "Web App • Student Wellness & Productivity",
         description: "ResourceDeck is a minimalist study platform built to tackle student stress. It combines a clean resource library with an empathetic UI that changes greetings based on the time of day, and a 'Smart Discovery' tool to keep students curious and relaxed during long study sessions.",
-        image: "/resource-dock.png",
+        image: "/Resource.png",
         tags: ["React", "Vite", "Tailwind", "GSAP"],
         link: "https://resource-deck-dun.vercel.app/"
     },
