@@ -2,6 +2,8 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Projects } from './components/Projects';
+import { Playground } from './components/Playground';
+import { TechMarquee } from './components/TechMarquee';
 import { Contact } from './components/Contact';
 import { useMousePosition } from './hooks/useMousePosition';
 import { motion, useScroll, useSpring } from 'framer-motion';
@@ -33,6 +35,7 @@ function App() {
       <div className="relative z-20">
         <Hero />
         <Projects />
+        <Playground />
 
         {/* Simple About Section */}
         <section id="about" className="py-32 px-6 max-w-7xl mx-auto">
@@ -86,6 +89,7 @@ function App() {
           </div>
         </section>
 
+        <TechMarquee />
         <Contact />
       </div>
 

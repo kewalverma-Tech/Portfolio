@@ -1,7 +1,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ExternalLink, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, ArrowUpRight, Plus } from 'lucide-react';
 import { projects } from '../data/projects';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import Magnetic from './Magnetic';
 
 function ProjectCard({ project, idx }) {
     const cardRef = useRef(null);
@@ -61,6 +62,8 @@ function ProjectCard({ project, idx }) {
 }
 
 export function Projects() {
+    const [visibleItems, setVisibleItems] = useState(3);
+
     return (
         <section id="work" className="py-32 px-6">
             <div className="max-w-7xl mx-auto">
@@ -75,10 +78,31 @@ export function Projects() {
                 </motion.div>
 
                 <div className="grid grid-cols-1 gap-32">
-                    {projects.map((project, idx) => (
+                    {projects.slice(0, visibleItems).map((project, idx) => (
                         <ProjectCard key={project.id} project={project} idx={idx} />
                     ))}
                 </div>
+
+                {projects.length > 3 && (
+                    <div className="flex justify-center mt-24">
+                        <Magnetic>
+                            <button
+                                onClick={() => {
+                                    if (visibleItems < projects.length) {
+                                        setVisibleItems(projects.length);
+                                    } else {
+                                        setVisibleItems(3);
+                                        document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                                className="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all text-white font-semibold flex items-center space-x-2"
+                            >
+                                <span>{visibleItems < projects.length ? "View More Work" : "Show Less"}</span>
+                                <Plus className={`w-4 h-4 transition-transform duration-300 ${visibleItems >= projects.length ? "rotate-45" : ""}`} />
+                            </button>
+                        </Magnetic>
+                    </div>
+                )}
             </div>
         </section>
     );

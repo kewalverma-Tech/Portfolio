@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { MousePointer2, Sparkles, ArrowDownRight } from 'lucide-react';
+import { MousePointer2, Sparkles, ArrowDownRight, Download } from 'lucide-react';
 
 import Magnetic from './Magnetic';
 
@@ -47,7 +47,7 @@ export function Hero() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
                 >
-                    I'm Kewal Verma, a Creative Technologist | UI/UX & Motion Designer | Front-End Developer. Based in India, working globally.
+                    I'm Kewal Verma, a Creative Technologist | UI/UX & Motion Designer | Front-End Developer. Bridging the gap between Data & Design.
                 </motion.p>
 
                 <motion.div
@@ -57,16 +57,24 @@ export function Hero() {
                     className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
                 >
                     <Magnetic>
-                        <button className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold overflow-hidden transition-all hover:pr-12">
+                        <button
+                            onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold overflow-hidden transition-all hover:pr-12"
+                        >
                             <span className="relative z-10">View Projects</span>
                             <ArrowDownRight className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-0 -translate-x-2" />
                         </button>
                     </Magnetic>
 
                     <Magnetic>
-                        <button className="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all text-white font-semibold">
-                            About Me
-                        </button>
+                        <a
+                            href="/resume.pdf"
+                            download
+                            className="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all text-white font-semibold flex items-center space-x-2"
+                        >
+                            <span>Download Resume</span>
+                            <Download className="w-4 h-4" />
+                        </a>
                     </Magnetic>
                 </motion.div>
             </div>
