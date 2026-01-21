@@ -8,5 +8,4 @@ export const projects = [
         tags: ["React", "CSS"],
         link: "https://goodbudget-omega.vercel.app"
     },
-    }
 ];
