@@ -1,51 +1,51 @@
 export const playgroundData = [
     {
         id: 1,
-        title: "Neon Rain",
-        tech: "p5.js",
-        description: "Matrix-style digital rain simulation with custom colors.",
-        link: "https://kewalverma-tech.github.io/scholarvault/"
+        title: "Magnetic Navigation",
+        tech: "GSAP",
+        description: "Sticky cursor interaction where menu items magnetically snap to the mouse position.",
+        link: "#"
     },
     {
         id: 2,
-        title: "Physics Grid",
-        tech: "Canvas API",
-        description: "Interactive grid that distorts on mouse hover using Verlet integration.",
+        title: "Parallax Gallery",
+        tech: "ScrollTrigger",
+        description: "Immersive photo grid where layers shift at different speeds while scrolling.",
         link: "#"
     },
     {
         id: 3,
-        title: "Audio Visualizer",
-        tech: "Web Audio API",
-        description: "Real-time frequency visualization reacting to microphone input.",
+        title: "3D Tilt Card",
+        tech: "React / CSS",
+        description: "Interactive card component that rotates in 3D space based on mouse hover coordinates.",
         link: "#"
     },
     {
         id: 4,
-        title: "Gradient Mesh",
-        tech: "WebGL / GLSL",
-        description: "Fluid morphing gradients using custom shaders.",
+        title: "Infinite Marquee",
+        tech: "Tailwind",
+        description: "Seamlessly looping typography animation used for bold modern headers.",
         link: "#"
     },
     {
         id: 5,
-        title: "Gradient Mesh",
-        tech: "WebGL / GLSL",
-        description: "Fluid morphing gradients using custom shaders.",
+        title: "Liquid Text Reveal",
+        tech: "GSAP",
+        description: "Staggered character animation that reveals text smoothly as it enters the viewport.",
         link: "#"
     },
     {
         id: 6,
-        title: "Gradient Mesh",
-        tech: "WebGL / GLSL",
-        description: "Fluid morphing gradients using custom shaders.",
+        title: "Custom Cursor",
+        tech: "React",
+        description: "A custom trailing cursor that morphs its shape when hovering over clickable elements.",
         link: "#"
     },
     {
         id: 7,
-        title: "Gradient Mesh",
-        tech: "WebGL / GLSL",
-        description: "Fluid morphing gradients using custom shaders.",
+        title: "Dark Mode Toggle",
+        tech: "React Context",
+        description: "Smooth circular transition effect that inverts app colors instantly on click.",
         link: "#"
     }
 ];
@@ -55,7 +55,7 @@ export const playgroundData = [
    Just copy the text below, uncomment it (remove //), and fill in your details:
 
    {
-       id: 5,
+       id: 8,
        title: "Your Project Name",
        tech: "Tool Used (e.g., HTML/CSS)",
        description: "Short description of what you made.",
