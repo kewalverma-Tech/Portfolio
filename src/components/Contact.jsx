@@ -63,16 +63,16 @@ export function Contact() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-xs uppercase font-bold tracking-widest text-muted-foreground">Name</label>
-                                    <input name="name" type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors" placeholder="John Doe" required />
+                                    <input name="name" type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors" placeholder="Enter Your name" required />
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-xs uppercase font-bold tracking-widest text-muted-foreground">Email</label>
-                                    <input name="email" type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors" placeholder="john@example.com" required />
+                                    <input name="email" type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors" placeholder="Enter Your email" required />
                                 </div>
                             </div>
                             <div className="space-y-2">
                                 <label className="text-xs uppercase font-bold tracking-widest text-muted-foreground">Message</label>
-                                <textarea name="message" rows={5} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors resize-none" placeholder="Tell me about your project..." required />
+                                <textarea name="message" rows={5} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors resize-none" placeholder="Enter Your message" required />
                             </div>
                             <Magnetic>
                                 <button className="w-full py-4 bg-white text-black font-bold rounded-xl hover:bg-white/90 transition-all active:scale-[0.98]">
