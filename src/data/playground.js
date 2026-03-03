@@ -1,6 +1,18 @@
 export const playgroundData = [
     {
         id: 1,
+        title: "Credit Card UI — Dark & Light Theme",
+        tech: "FIGMA / UI DESIGN",
+        description: "Exploring typography, color systems and layout through a credit card component.",
+        link: "#",
+        images: [
+            "/playground/Card-1.png",
+            "/playground/Card-2.png",
+            "/playground/Card-3.png"
+        ]
+    },
+    {
+        id: 2,
         title: "Magnetic Navigation",
         tech: "GSAP",
         description: "Sticky cursor interaction where menu items magnetically snap to the mouse position.",

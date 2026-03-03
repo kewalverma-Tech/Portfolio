@@ -1,8 +1,65 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import { playgroundData } from '../data/playground';
 import Magnetic from './Magnetic';
+
+function ImageCarousel({ images }) {
+    const [activeIdx, setActiveIdx] = useState(0);
+    const [hovered, setHovered] = useState(false);
+
+    useEffect(() => {
+        if (hovered) return; // pause on hover
+        const interval = setInterval(() => {
+            setActiveIdx(prev => (prev + 1) % images.length);
+        }, 2000);
+        return () => clearInterval(interval);
+    }, [hovered, images.length]);
+
+    // Right arrow key → next image (only when hovered)
+    useEffect(() => {
+        if (!hovered) return;
+        const handleKey = (e) => {
+            if (e.key === 'ArrowRight') {
+                setActiveIdx(prev => (prev + 1) % images.length);
+            }
+        };
+        window.addEventListener('keydown', handleKey);
+        return () => window.removeEventListener('keydown', handleKey);
+    }, [hovered, images.length]);
+
+    return (
+        <div
+            className="w-full aspect-square rounded-2xl overflow-hidden relative border border-white/10 group-hover:border-primary/50 transition-colors duration-500"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+        >
+            <AnimatePresence mode="wait">
+                <motion.img
+                    key={activeIdx}
+                    src={images[activeIdx]}
+                    alt={`preview-${activeIdx}`}
+                    initial={{ opacity: 0, x: 40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -40 }}
+                    transition={{ duration: 0.4, ease: 'easeInOut' }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+            </AnimatePresence>
+            {/* Dot indicators */}
+            <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-10">
+                {images.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={(e) => { e.preventDefault(); setActiveIdx(i); }}
+                        className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIdx ? 'bg-primary w-4' : 'bg-white/30 w-1.5'}`}
+                    />
+                ))}
+            </div>
+        </div>
+
+    );
+}
 
 export function Playground() {
     const [visibleItems, setVisibleItems] = useState(6);
@@ -33,16 +90,22 @@ export function Playground() {
                             className={`group block ${item.link === "#" ? "cursor-default" : "cursor-pointer"}`}
                             onClick={(e) => item.link === "#" && e.preventDefault()}
                         >
-                            {/* Thumbnail Placeholder */}
-                            <div className={`w-full aspect-square bg-white/5 border border-white/10 rounded-2xl mb-6 overflow-hidden relative group-hover:border-primary/50 transition-colors duration-500`}>
-                                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <div className={`absolute inset-0 flex items-center justify-center font-mono text-xs uppercase tracking-widest transition-colors ${item.link === "#"
+                            {/* Thumbnail */}
+                            {item.images && item.images.length > 0 ? (
+                                <div className="mb-6">
+                                    <ImageCarousel images={item.images} />
+                                </div>
+                            ) : (
+                                <div className={`w-full aspect-square bg-white/5 border border-white/10 rounded-2xl mb-6 overflow-hidden relative group-hover:border-primary/50 transition-colors duration-500`}>
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                    <div className={`absolute inset-0 flex items-center justify-center font-mono text-xs uppercase tracking-widest transition-colors ${item.link === "#"
                                         ? "text-white/20"
                                         : "text-white/20 group-hover:text-primary/50"
-                                    }`}>
-                                    {item.link === "#" ? "Coming Soon" : "Preview"}
+                                        }`}>
+                                        {item.link === "#" ? "Coming Soon" : "Preview"}
+                                    </div>
                                 </div>
-                            </div>
+                            )}
 
                             <div className="space-y-2">
                                 <div className="flex items-center justify-between">
