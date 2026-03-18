@@ -13,48 +13,64 @@ export const playgroundData = [
     },
     {
         id: 2,
-        title: "Magnetic Navigation",
-        tech: "GSAP",
-        description: "Sticky cursor interaction where menu items magnetically snap to the mouse position.",
-        link: "#"
-    },
-    {
-        id: 2,
-        title: "Parallax Gallery",
-        tech: "ScrollTrigger",
-        description: "Immersive photo grid where layers shift at different speeds while scrolling.",
-        link: "#"
+        title: "SaaS Pricing Card Design",
+        tech: "FIGMA / UI DESIGN",
+        description: "Clean pricing card with 60-30-10 color rule and clear visual hierarchy.",
+        link: "#",
+        images: [
+            "/playground/Pricing Card.png"
+        ]
     },
     {
         id: 3,
-        title: "3D Tilt Card",
-        tech: "React / CSS",
-        description: "Interactive card component that rotates in 3D space based on mouse hover coordinates.",
-        link: "#"
+        title: "Login Screen — Mobile & Desktop",
+        tech: "FIGMA / UI DESIGN",
+        description: "Responsive login flow with proper spacing, grid system and form alignment",
+        link: "#",
+        images: [
+            "/playground/Login Screen — Mobile.png",
+            "/playground/Login Screen — Desktop.png"
+        ]
     },
     {
         id: 4,
-        title: "Infinite Marquee",
-        tech: "Tailwind",
-        description: "Seamlessly looping typography animation used for bold modern headers.",
-        link: "#"
+        title: "Content Creator Dashboard",
+        tech: "FIGMA / UI DESIGN",
+        description: "Data-rich dashboard with 5 chart types — subscriber growth, revenue, engagement metrics",
+        link: "#",
+        images: [
+            "/playground/Creator-Widget.png"
+        ]
     },
     {
         id: 5,
+        title: "Nexus App Onboarding Flow",
+        tech: "FIGMA / UI DESIGN",
+        description: "4-screen mobile onboarding with symmetric balance, contrast and center alignment.",
+        link: "#",
+        images: [
+            "/playground/Onboarding Flow-01.png",
+            "/playground/Onboarding Flow-02.png",
+            "/playground/Onboarding Flow-03.png",
+            "/playground/Onboarding Flow-04.png"
+        ]
+    },
+    {
+        id: 6,
         title: "Liquid Text Reveal",
         tech: "GSAP",
         description: "Staggered character animation that reveals text smoothly as it enters the viewport.",
         link: "#"
     },
     {
-        id: 6,
+        id: 7,
         title: "Custom Cursor",
         tech: "React",
         description: "A custom trailing cursor that morphs its shape when hovering over clickable elements.",
         link: "#"
     },
     {
-        id: 7,
+        id: 8,
         title: "Dark Mode Toggle",
         tech: "React Context",
         description: "Smooth circular transition effect that inverts app colors instantly on click.",
