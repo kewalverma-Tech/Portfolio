@@ -30,7 +30,7 @@ function ImageCarousel({ images }) {
 
     return (
         <div
-            className="w-full aspect-square rounded-2xl overflow-hidden relative border border-white/10 group-hover:border-primary/50 transition-colors duration-500"
+            className="w-full aspect-square rounded-2xl overflow-hidden relative border border-white/10 group-hover:border-primary/50 bg-white/5 transition-colors duration-500"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
@@ -39,11 +39,11 @@ function ImageCarousel({ images }) {
                     key={activeIdx}
                     src={images[activeIdx]}
                     alt={`preview-${activeIdx}`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ opacity: 0, x: 40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -40 }}
+                    transition={{ duration: 0.4, ease: 'easeInOut' }}
+                    className="absolute inset-0 w-full h-full object-contain p-6"
                 />
             </AnimatePresence>
             {/* Dot indicators */}
