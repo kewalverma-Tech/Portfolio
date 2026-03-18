@@ -22,11 +22,11 @@ function ProjectCard({ project, idx }) {
             className={idx % 2 === 0 ? "flex flex-col lg:flex-row gap-12 items-center" : "flex flex-col lg:flex-row-reverse gap-12 items-center"}
         >
             {/* Image Container */}
-            <div className="relative w-full lg:w-3/5 group overflow-hidden rounded-2xl bg-white/5 border border-white/10 aspect-video">
+            <div className="relative w-full lg:w-3/5 shrink-0 group overflow-hidden rounded-2xl bg-white/5 border border-white/10 aspect-video">
                 <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                     <div className="flex space-x-3">
