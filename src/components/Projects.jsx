@@ -1,108 +1,63 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ExternalLink, ArrowUpRight, Plus } from 'lucide-react';
-import { projects } from '../data/projects';
-import { useRef, useState } from 'react';
-import Magnetic from './Magnetic';
-
-function ProjectCard({ project, idx }) {
-    const cardRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: cardRef,
-        offset: ["start end", "end start"]
-    });
-
-    const scale = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0.95, 1, 1, 0.95]);
-    const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.6, 1, 1, 0.6]);
-
-    return (
-        <motion.div
-            ref={cardRef}
-            style={{ scale, opacity }}
-            transition={{ duration: 0.8 }}
-            className={idx % 2 === 0 ? "flex flex-col lg:flex-row gap-12 items-center" : "flex flex-col lg:flex-row-reverse gap-12 items-center"}
-        >
-            {/* Image Container */}
-            <div className="relative w-full lg:w-3/5 shrink-0 group overflow-hidden rounded-2xl bg-white/5 border border-white/10 aspect-video">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                    <div className="flex space-x-3">
-                        {project.tags.map(tag => (
-                            <span key={tag} className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest text-white border border-white/10">
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Content Panel */}
-            <div className="w-full lg:w-2/5">
-                <div className="text-sm font-bold text-primary mb-4 uppercase tracking-widest">{project.category}</div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-6">{project.title}</h3>
-                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                    {project.description}
-                </p>
-
-                <a
-                    href={project.link}
-                    className="inline-flex items-center space-x-2 text-white font-semibold group"
-                >
-                    <span>View Case Study</span>
-                    <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center transition-all group-hover:bg-white group-hover:text-black group-hover:border-white">
-                        <ArrowUpRight className="w-5 h-5" />
-                    </div>
-                </a>
-            </div>
-        </motion.div>
-    );
-}
+import { motion } from 'framer-motion';
+import { Lock } from 'lucide-react';
 
 export function Projects() {
-    const [visibleItems, setVisibleItems] = useState(3);
-
     return (
         <section id="work" className="py-32 px-6">
             <div className="max-w-7xl mx-auto">
+
+                {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
                     className="mb-20"
                 >
                     <h2 className="text-sm uppercase tracking-[0.3em] font-bold text-primary mb-4">Selected Work</h2>
-                    <p className="text-4xl md:text-5xl font-bold">Bringing ideas to life <br /> through digital craftsmanship.</p>
+                    <p className="text-4xl md:text-5xl font-bold">
+                        Bringing ideas to life <br /> through digital craftsmanship.
+                    </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 gap-32">
-                    {projects.slice(0, visibleItems).map((project, idx) => (
-                        <ProjectCard key={project.id} project={project} idx={idx} />
-                    ))}
-                </div>
+                {/* Coming Soon Placeholder */}
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="relative overflow-hidden rounded-3xl border border-border bg-foreground/[0.02] px-10 py-20 flex flex-col items-center justify-center text-center gap-6"
+                >
+                    {/* Subtle background glow */}
+                    <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 rounded-3xl"
+                        style={{
+                            background: 'radial-gradient(ellipse 60% 50% at 50% 100%, rgba(180, 80, 30, 0.08), transparent)',
+                        }}
+                    />
 
-                {projects.length > 3 && (
-                    <div className="flex justify-center mt-24">
-                        <Magnetic>
-                            <button
-                                onClick={() => {
-                                    if (visibleItems < projects.length) {
-                                        setVisibleItems(projects.length);
-                                    } else {
-                                        setVisibleItems(3);
-                                        document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                }}
-                                className="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all text-white font-semibold flex items-center space-x-2"
-                            >
-                                <span>{visibleItems < projects.length ? "View More Work" : "Show Less"}</span>
-                                <Plus className={`w-4 h-4 transition-transform duration-300 ${visibleItems >= projects.length ? "rotate-45" : ""}`} />
-                            </button>
-                        </Magnetic>
+                    {/* Live indicator dot */}
+                    <div className="flex items-center gap-2">
+                        <span className="relative flex h-2.5 w-2.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary" />
+                        </span>
+                        <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+                            In Progress
+                        </span>
                     </div>
-                )}
+
+                    {/* Message */}
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground max-w-lg leading-snug">
+                        Case studies coming soon — currently working on 2 product design projects.
+                    </h3>
+
+                    <p className="text-muted-foreground text-base max-w-sm">
+                        Check back soon. Deep-dive case studies are being documented and will be published here.
+                    </p>
+                </motion.div>
+
             </div>
         </section>
     );

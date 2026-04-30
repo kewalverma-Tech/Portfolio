@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ExternalLink } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '../lib/utils';
 import Magnetic from './Magnetic';
 
@@ -26,7 +26,7 @@ export function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 py-4",
-                isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-white/10" : "bg-transparent"
+                isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : "bg-transparent"
             )}
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -34,7 +34,7 @@ export function Navbar() {
                     href="#"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent"
+                    className="text-2xl font-bold tracking-tight text-foreground"
                 >
                     KV
                 </motion.a>
@@ -48,7 +48,7 @@ export function Navbar() {
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="text-sm font-medium text-muted-foreground hover:text-white transition-colors block px-4 py-2"
+                                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors block px-4 py-2"
                             >
                                 {link.name}
                             </motion.a>
@@ -59,7 +59,7 @@ export function Navbar() {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="px-5 py-2 rounded-full bg-white text-black text-sm font-semibold hover:bg-white/90 transition-all active:scale-95"
+                            className="px-5 py-2 rounded-full bg-foreground text-background text-sm font-semibold hover:opacity-90 transition-all active:scale-95"
                         >
                             Let's Talk
                         </motion.button>
@@ -68,7 +68,7 @@ export function Navbar() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-white"
+                    className="md:hidden text-foreground"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                     {mobileMenuOpen ? <X /> : <Menu />}
@@ -82,14 +82,14 @@ export function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-background border-b border-white/10 overflow-hidden"
+                        className="md:hidden bg-background border-b border-border overflow-hidden"
                     >
                         <div className="flex flex-col space-y-4 p-6">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    className="text-lg font-medium text-muted-foreground hover:text-white"
+                                    className="text-lg font-medium text-muted-foreground hover:text-foreground"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     {link.name}
@@ -100,7 +100,7 @@ export function Navbar() {
                                     setMobileMenuOpen(false);
                                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className="w-full py-3 rounded-lg bg-white text-black font-semibold"
+                                className="w-full py-3 rounded-lg bg-foreground text-background font-semibold"
                             >
                                 Let's Talk
                             </button>
