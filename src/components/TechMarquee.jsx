@@ -1,10 +1,12 @@
 import { FaReact, FaPython, FaNodeJs } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
 import { IoLogoJavascript } from "react-icons/io5";
+import { SiFramer } from "react-icons/si";
 
 const techStack = [
     { name: "React", icon: FaReact, color: "#61DAFB" },
     { name: "Figma", icon: FiFigma, color: "#F24E1E" },
+    { name: "Framer", icon: SiFramer, color: "#0055FF" },
     { name: "JavaScript", icon: IoLogoJavascript, color: "#F7DF1E" },
     { name: "Python", icon: FaPython, color: "#3776AB" },
     { name: "Node.js", icon: FaNodeJs, color: "#339933" },
