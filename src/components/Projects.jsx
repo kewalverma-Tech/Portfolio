@@ -85,7 +85,7 @@ export function Projects() {
                 {/* OTHER PROJECTS GRID */}
                 <div className="space-y-8">
                     <h3 className="text-xs uppercase tracking-widest font-bold text-muted-foreground mb-6">Other Projects</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {projects.map((project) => (
                             <motion.div
                                 key={project.id}
