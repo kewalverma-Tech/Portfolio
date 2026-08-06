@@ -343,19 +343,19 @@ export function Projects() {
                                     {/* Formatted Article Text as 2-Column Card Grid */}
                                     <div className="space-y-4 text-base leading-relaxed text-foreground">
                                         <p className="text-foreground font-medium text-lg mb-4">
-                                            The location screen gives users flexible ways to set where their food should arrive.
+                                            The location flow uses a tri-path navigation architecture to ensure 100% address accuracy before food selection, preventing order cancellations.
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Manual & GPS Search:</strong> Users can type an address manually or tap <strong>"Turn on Location"</strong> to let GPS auto-detect their exact spot.
+                                                    <strong>GPS vs. Manual Search Rationale:</strong> Instant GPS auto-detection handles high-intent, immediate orders, while manual search accommodates users who have location permissions turned off or are ordering food for someone in another city.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Saved Addresses & Map Pin:</strong> "Add New Address" lets users drop a pin on the map, while saved addresses like Home or Work stay ready for one-tap selection.
+                                                    <strong>Map Pin & Saved Address Memory:</strong> Interactive map-pinning solves ambiguity for complex or landmark-based Indian addresses. Saved address pills (Home/Work) sit at the top to enable 1-tap delivery setup for high-frequency repeat users.
                                                 </p>
                                             </div>
                                         </div>
