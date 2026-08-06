@@ -63,12 +63,12 @@ export function Projects() {
 
                             {/* Title */}
                             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight">
-                                Swiggy – UX Audit & Opportunity Mapping
+                                Swiggy - UX Audit & Opportunity Mapping
                             </h3>
 
                             {/* Subtitle */}
                             <p className="text-muted-foreground text-base leading-relaxed mb-8">
-                                Deconstructing Swiggy's home, profile, and location architecture using Affinity Mapping & HMWs.
+                                A hands-on breakdown of Swiggy's home, profile, and location flows using affinity mapping and problem framing.
                             </p>
 
                             {/* CTA Button */}
@@ -168,7 +168,7 @@ export function Projects() {
                             {/* Main Title & Meta Header */}
                             <div className="mb-12">
                                 <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
-                                    Swiggy – UX Audit & Opportunity Mapping
+                                    Swiggy - UX Audit & Opportunity Mapping
                                 </h1>
                                 <div className="flex items-center gap-4 text-sm text-muted-foreground border-y border-border/60 py-4">
                                     <span className="flex items-center gap-2 text-foreground font-medium">
@@ -191,10 +191,10 @@ export function Projects() {
                                     </h2>
                                     <div className="p-6 rounded-2xl bg-foreground/[0.03] border border-border/80 space-y-3 text-base md:text-lg leading-relaxed text-foreground font-normal">
                                         <p className="text-foreground">
-                                            Swiggy is one of India's leading hyper-local food and grocery delivery platforms. This comprehensive UX audit deconstructs 3 core application touchpoints: <strong>Home Page</strong>, <strong>Profile Settings</strong>, and <strong>Location Update Flow</strong>.
+                                            Swiggy is one of India's top food and grocery apps. In this case study, I broke down three main parts of the app: the <strong>Home Page</strong>, <strong>Profile Settings</strong>, and <strong>Location Update</strong> flow.
                                         </p>
                                         <p className="text-foreground/90">
-                                            The objective is to map search accessibility, cognitive clutter, monetization banners vs user comfort, and strategic placement of retention drivers across the user journey.
+                                            My goal was simple: spot usability issues, find hidden friction, and see how business goals balance with user experience.
                                         </p>
                                     </div>
                                 </section>
@@ -222,37 +222,37 @@ export function Projects() {
                                     {/* Formatted Article Text as 2-Column Card Grid */}
                                     <div className="space-y-4 text-base leading-relaxed text-foreground">
                                         <p className="text-foreground font-medium text-lg mb-4">
-                                            The Home page is heavily focused around the <strong>Search Bar</strong> to immediately prompt users to find their desired food.
+                                            The home page puts the search bar front and center so users can find food immediately.
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Search & Dietary Filters:</strong> Beside the search bar, a toggle option is provided for <strong>Vegetarian</strong> or <strong>Non-Vegetarian</strong> preferences. A <strong>Mic icon</strong> is integrated directly in the search bar to allow hands-free voice search for users who prefer not to type.
+                                                    <strong>Search & Dietary Filters:</strong> Swiggy places a clear <strong>Veg/Non-Veg</strong> toggle right next to the search bar. The <strong>mic icon</strong> lets users search by voice, which helps when typing feels tedious.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Top Navigation Shortcuts:</strong> On the top-right, a direct <strong>Profile icon</strong> allows immediate access to profile settings. On the top-left, the <strong>Location text frame</strong> displays the current delivery address; tapping it opens the location picker with current GPS detection.
+                                                    <strong>Top Navigation Shortcuts:</strong> The <strong>profile icon</strong> sits at the top right for quick account access. The <strong>address pill</strong> on the top left shows where food will be delivered and opens location controls when tapped.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Contrast & Visual Hierarchy:</strong> A dark blue background header increases contrast and readability across top controls.
+                                                    <strong>Contrast & Hierarchy:</strong> A dark blue header block creates strong visual contrast, making key top actions easy to read.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>IPL Banners & Monetization:</strong> Directly below the search bar, dynamic banners highlight time-sensitive IPL offers, co-branded with the <em>super.money</em> UPI app to promote integrated payments. Secondary offer cards below the blue section display additional consumer deals.
+                                                    <strong>Deals & Promotions:</strong> Prominent banners right below search highlight time-sensitive IPL deals and <em>super.money</em> UPI offers. Additional deal cards scroll below to keep users browsing.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all md:col-span-2">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Fast Delivery & Footer Controls:</strong> A dedicated <em>"Fast Delivery"</em> section categorizes items delivered quicker than average. The footer navigation bar offers 3 main tabs: <strong>Food</strong>, <strong>EatRight</strong>, and <strong>Reorder</strong>, along with an interactive IPL offer widget.
+                                                    <strong>Fast Delivery & Footer:</strong> A dedicated <em>"Fast Delivery"</em> rail groups restaurants with quick turnaround times. The bottom nav keeps three core tabs handy: <strong>Food</strong>, <strong>EatRight</strong>, and <strong>Reorder</strong>.
                                                 </p>
                                             </div>
                                         </div>
@@ -282,38 +282,38 @@ export function Projects() {
                                     {/* Formatted Article Text as 2-Column Card Grid */}
                                     <div className="space-y-4 text-base leading-relaxed text-foreground">
                                         <p className="text-foreground font-medium text-lg mb-4">
-                                            At the top of the Profile page, the user's <strong>Name and Mobile Number</strong> are presented on a soft light background with dark text, keeping the primary focus on user identity.
+                                            The profile header keeps things clear by showing your name and phone number on a clean, light background.
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all md:col-span-2">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Help & Account Settings:</strong> Top-right features a prominent <strong>Help option</strong> for users facing order issues, transaction failures, or scams. Next to it, a 3-dot menu grants access to edit profile, settings, and logout.
+                                                    <strong>Help & Settings:</strong> A top-right <strong>Help button</strong> gives instant access for order or payment issues. Next to it, a three-dot menu opens account settings.
                                                 </p>
                                                 {/* UX Insight Callout */}
                                                 <div className="mt-3 p-3.5 rounded-xl bg-primary/10 border border-primary/30 text-foreground flex items-start gap-3 text-xs md:text-sm shadow-inner">
                                                     <Lightbulb className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                                                     <div>
-                                                        <span className="font-bold text-primary">UX Insight:</span> Placing the logout option at the bottom of the page is ideal to prevent accidental logouts during user stress.
+                                                        <span className="font-bold text-primary">UX Insight:</span> Moving logout to the very bottom prevents accidental taps when a user is already frustrated.
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Swiggy One Subscription Incentive:</strong> Positioned directly below identity info, a membership card leverages FOMO drivers—motivating users to join for unlimited free delivery, extra discounts, and priority delivery during peak hours.
+                                                    <strong>Swiggy One Membership:</strong> Placed right below profile details, this card highlights perks like free delivery and extra discounts to encourage upgrades.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Account Quick Links:</strong> Essential account options like <em>My Vouchers</em>, <em>Account Statements</em>, <em>Saved Addresses</em>, and <em>My Refunds</em> are presented with equal contrast and typography, establishing clarity and trust.
+                                                    <strong>Account Quick Links:</strong> Key actions like <em>Vouchers</em>, <em>Statements</em>, <em>Saved Addresses</em>, and <em>Refunds</em> get equal visual weight, making the layout feel clean and reliable.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all md:col-span-2">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Past Order Shortcut Psychology:</strong> A high-contrast dark CTA reading <strong>"BROWSE PAST ORDERS"</strong> sits anchored at the bottom. This leverages craving triggers and nostalgia—allowing users to quickly re-order past favorite meals without searching.
+                                                    <strong>Past Order Shortcuts:</strong> A dark <strong>"BROWSE PAST ORDERS"</strong> button sits near the bottom. It taps into repeat habits, letting users re-order favorite meals in one tap.
                                                 </p>
                                             </div>
                                         </div>
@@ -343,19 +343,19 @@ export function Projects() {
                                     {/* Formatted Article Text as 2-Column Card Grid */}
                                     <div className="space-y-4 text-base leading-relaxed text-foreground">
                                         <p className="text-foreground font-medium text-lg mb-4">
-                                            The Location update screen allows users to configure delivery destinations through multiple intuitive input options.
+                                            The location screen gives users flexible ways to set where their food should arrive.
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Manual & Automated Selection:</strong> Provides a manual search bar to type any area/address alongside a 1-tap <strong>"Turn on Location"</strong> option that uses GPS auto-detection.
+                                                    <strong>Manual & GPS Search:</strong> Users can type an address manually or tap <strong>"Turn on Location"</strong> to let GPS auto-detect their exact spot.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Interactive Map & Address Management:</strong> "Add New Address" allows pin-drop selection on a map. Below, all previously saved addresses (Home, Work, etc.) are listed for instant 1-tap selection.
+                                                    <strong>Saved Addresses & Map Pin:</strong> "Add New Address" lets users drop a pin on the map, while saved addresses like Home or Work stay ready for one-tap selection.
                                                 </p>
                                             </div>
                                         </div>
