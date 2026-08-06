@@ -222,37 +222,37 @@ export function Projects() {
                                     {/* Formatted Article Text as 2-Column Card Grid */}
                                     <div className="space-y-4 text-base leading-relaxed text-foreground">
                                         <p className="text-foreground font-medium text-lg mb-4">
-                                            The home page puts the search bar front and center so users can find food immediately.
+                                            The Home page focuses heavily on the Search Bar as the primary entry point to minimize the time-to-first-click for hungry users.
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Search & Dietary Filters:</strong> Swiggy places a clear <strong>Veg/Non-Veg</strong> toggle right next to the search bar. The <strong>mic icon</strong> lets users search by voice, which helps when typing feels tedious.
+                                                    <strong>Search & Dietary Micro-actions:</strong> The Veg/Non-Veg toggle is placed directly beside the search bar to eliminate friction for users with strict dietary preferences. The Mic icon provides a voice-first alternative for users who want to avoid typing dish names manually.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Top Navigation Shortcuts:</strong> The <strong>profile icon</strong> sits at the top right for quick account access. The <strong>address pill</strong> on the top left shows where food will be delivered and opens location controls when tapped.
+                                                    <strong>Location Context & Profile Shortcuts:</strong> The top-left location selector grounds the user's delivery context immediately before browsing. Tapping it opens quick GPS auto-detection. Profile access is kept top-right to remain accessible without distracting from the main food feed.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Contrast & Hierarchy:</strong> A dark blue header block creates strong visual contrast, making key top actions easy to read.
+                                                    <strong>Visual Hierarchy & Contrast:</strong> The dark blue header block was deliberately chosen to increase visual contrast, separating top system controls from the vibrant promotional banners below for better readability.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Deals & Promotions:</strong> Prominent banners right below search highlight time-sensitive IPL deals and <em>super.money</em> UPI offers. Additional deal cards scroll below to keep users browsing.
+                                                    <strong>Monetization & Deal Hooks:</strong> Prime real estate directly below search is used during peak IPL season to promote co-branded UPI offers (super.money), balancing ad-monetization with high-visibility consumer discounts.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all md:col-span-2">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Fast Delivery & Footer:</strong> A dedicated <em>"Fast Delivery"</em> rail groups restaurants with quick turnaround times. The bottom nav keeps three core tabs handy: <strong>Food</strong>, <strong>EatRight</strong>, and <strong>Reorder</strong>.
+                                                    <strong>Decision Acceleration & Footer:</strong> The dedicated 'Fast Delivery' rail caters to urgent, high-intent orders by grouping quick turnaround restaurants. The footer grounds main navigation (Food, EatRight, Reorder) within natural thumb reach.
                                                 </p>
                                             </div>
                                         </div>
