@@ -282,38 +282,38 @@ export function Projects() {
                                     {/* Formatted Article Text as 2-Column Card Grid */}
                                     <div className="space-y-4 text-base leading-relaxed text-foreground">
                                         <p className="text-foreground font-medium text-lg mb-4">
-                                            The profile header keeps things clear by showing your name and phone number on a clean, light background.
+                                            The Profile page grounds user identity while balancing support accessibility, membership conversion hooks, and habit-driven re-ordering shortcuts.
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all md:col-span-2">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Help & Settings:</strong> A top-right <strong>Help button</strong> gives instant access for order or payment issues. Next to it, a three-dot menu opens account settings.
+                                                    <strong>Support & Settings Friction:</strong> The top-right Help button gives immediate support for live delivery or payment issues.
                                                 </p>
                                                 {/* UX Insight Callout */}
                                                 <div className="mt-3 p-3.5 rounded-xl bg-primary/10 border border-primary/30 text-foreground flex items-start gap-3 text-xs md:text-sm shadow-inner">
                                                     <Lightbulb className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                                                     <div>
-                                                        <span className="font-bold text-primary">UX Insight:</span> Moving logout to the very bottom prevents accidental taps when a user is already frustrated.
+                                                        <span className="font-bold text-primary">UX Insight:</span> <strong>Logout Placement Risk:</strong> Placing the logout action inside the top 3-dot menu increases accidental taps when a user is already stressed or frustrated with an order. It should ideally sit anchored at the very bottom of the page.
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Swiggy One Membership:</strong> Placed right below profile details, this card highlights perks like free delivery and extra discounts to encourage upgrades.
+                                                    <strong>Membership & Craving Triggers:</strong> Positioned directly below identity to tap into user craving and FOMO-highlighting free delivery and peak-hour priority to drive recurring subscription upgrades.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Account Quick Links:</strong> Key actions like <em>Vouchers</em>, <em>Statements</em>, <em>Saved Addresses</em>, and <em>Refunds</em> get equal visual weight, making the layout feel clean and reliable.
+                                                    <strong>Visual Hierarchy & User Trust:</strong> Key actions like My Vouchers, Saved Addresses, and My Refunds share equal visual weight and contrast, building a sense of clarity, comfort, and account transparency.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 rounded-xl border border-neutral-200 dark:border-border/80 bg-neutral-50 dark:bg-foreground/[0.03] shadow-sm hover:shadow-md transition-all md:col-span-2">
                                                 <p className="text-foreground text-sm md:text-base">
-                                                    <strong>Past Order Shortcuts:</strong> A dark <strong>"BROWSE PAST ORDERS"</strong> button sits near the bottom. It taps into repeat habits, letting users re-order favorite meals in one tap.
+                                                    <strong>Re-order Psychology & Nostalgia:</strong> The high-contrast dark CTA ("Browse Past Orders") triggers food nostalgia and craving memory. It allows users to quickly recall and re-order dishes they loved weeks ago without needing to remember dish names or search from scratch.
                                                 </p>
                                             </div>
                                         </div>
