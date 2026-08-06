@@ -32,7 +32,7 @@ function App() {
       <Navbar />
 
       {/* Sections */}
-      <div className="relative z-20">
+      <div className="relative">
         <Hero />
         <Projects />
         <Playground />
