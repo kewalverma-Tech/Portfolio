@@ -93,7 +93,7 @@ export function Projects() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5 }}
-                                className="group relative rounded-2xl border border-border bg-foreground/[0.02] hover:bg-foreground/[0.04] transition-all duration-300 flex flex-col overflow-hidden"
+                                className="group relative rounded-2xl border border-border bg-foreground/[0.02] hover:bg-foreground/[0.04] transition-all duration-300 flex flex-col overflow-hidden shadow-sm hover:shadow-md"
                             >
                                 <div className="relative aspect-[16/10] overflow-hidden bg-muted/20">
                                     <img
@@ -101,18 +101,18 @@ export function Projects() {
                                         alt={project.title}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
-                                    <div className="absolute top-3 left-3">
-                                        <span className="px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-background/80 backdrop-blur-md border border-border text-primary">
+                                    <div className="absolute top-3.5 left-3.5">
+                                        <span className="px-3.5 py-1.5 rounded-full text-xs uppercase font-bold tracking-wider bg-background/90 text-primary border border-primary/20 shadow-md backdrop-blur-md">
                                             {project.category}
                                         </span>
                                     </div>
                                 </div>
-                                <div className="p-6 flex-1 flex flex-col justify-between">
+                                <div className="p-7 flex-1 flex flex-col justify-between">
                                     <div>
-                                        <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                                        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                                             {project.title}
                                         </h4>
-                                        <p className="text-muted-foreground text-xs leading-relaxed mb-4 line-clamp-3">
+                                        <p className="text-foreground/90 text-sm md:text-base leading-relaxed mb-6">
                                             {project.description}
                                         </p>
                                     </div>
@@ -120,9 +120,9 @@ export function Projects() {
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline mt-2"
+                                        className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline mt-2 self-start"
                                     >
-                                        View Project <ExternalLink className="w-3.5 h-3.5" />
+                                        View Project <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                                     </a>
                                 </div>
                             </motion.div>
